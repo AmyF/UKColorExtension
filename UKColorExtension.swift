@@ -30,3 +30,8 @@ extension UIColor {
     }
 }
 
+extension Optional where Wrapped: Collection {
+    var unwrappedCount: Int {
+        return self?.count ?? 0
+    }
+}
